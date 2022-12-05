@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'cookbook',
-]
+]                                  
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
