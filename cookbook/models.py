@@ -1,5 +1,5 @@
 from django.db import models
-from django.contib.auth.models import User
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -35,7 +35,7 @@ class Recipe(models.Model):
 class Comment(models.Model):
     """Comment Model"""
     recipe = models.ForeignKey(
-        Recipe, on_delete=CASCADE, related_name='comments')
+        Recipe, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
