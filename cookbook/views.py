@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Recipe, Submission
-from .forms import CommentForm
+from .forms import CommentForm, SubmitRecipeForm
 from django.http import HttpResponseRedirect
 
 
@@ -91,4 +91,22 @@ class SubmissionPage(generic.ListView):
     template_name = 'user_submissions.html'
     paginate_by = 8
 
+    def submit_recipe(request):
 
+        if request.method == 'POST':
+
+            submission_form = SubmitRecipeForm(request.POST, request.FILES)
+
+            if submission_form.is_valid():
+                submission_form.instance.user = request.user
+                submission_form.save()
+
+            else:
+                submission_form = SubmitRecipeForm()
+
+            render(
+                request, 'submit_recipe.html',
+                {
+                    'submission_form': SubmitRecipeForm(),
+                },
+            )

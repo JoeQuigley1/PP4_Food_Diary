@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, Submission
 from django import forms
 
 
@@ -8,3 +8,12 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
         
+
+class SubmitRecipeForm(forms.ModelForm):
+
+    class Meta:
+        model = Submission
+        fields = (
+            'ingredients',
+        )
+

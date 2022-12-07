@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+
+{% if user.is_authenticated %}
+
+<form action="" method="POST">
+    {{ submission_form | crispy }}
+    {% csrf_token %}
+
+    <button class="btn" type="submit">Submit</button>
+
+</form>
+{% endif %}
+
+
+{%endblock%}
