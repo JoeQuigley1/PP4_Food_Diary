@@ -48,3 +48,26 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Submission(models.Model):
+
+    submission_title = models.CharField(
+        max_length=50, unique=True, null=False, blank=False
+    )
+    submission_slug = models.SlugField(max_length=50, unique=True)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user_submissions')
+    method = models.TextField(blank=False,)
+    ingredients = models.TextField(blank=False)
+    created_on = models.DateTimeField(auto_now=True)
+    image = CloudinaryField('image', default='placeholder')
+    submission_status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        """Orders the submissions by most recent"""
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.submission_title
+

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from .models import Recipe
+from .models import Recipe, Submission
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
 
@@ -82,3 +82,13 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
         
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class SubmissionPage(generic.ListView):
+
+    model = Submission
+    queryset = Submission.objects.filter(submission_status=1).order_by('-created_on')
+    template_name = 'user_submissions.html'
+    paginate_by = 8
+
+
