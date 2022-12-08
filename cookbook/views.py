@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse 
 from django.views import generic, View
 from .models import Recipe, Submission
 from .forms import CommentForm, SubmitRecipeForm
@@ -91,22 +91,25 @@ class SubmissionPage(generic.ListView):
     template_name = 'user_submissions.html'
     paginate_by = 8
 
-    def submit_recipe(request):
 
-        if request.method == 'POST':
+def submit_recipe(request):
 
-            submission_form = SubmitRecipeForm(request.POST, request.FILES)
+    if request.method == 'POST':
 
-            if submission_form.is_valid():
-                submission_form.instance.user = request.user
-                submission_form.save()
+        submission_form = SubmitRecipeForm(request.POST, request.FILES)
 
-            else:
-                submission_form = SubmitRecipeForm()
+        if submission_form.is_valid():
+            submission_form.instance.user = request.user
+            submission_form.save()
 
-            render(
-                request, 'submit_recipe.html',
-                {
-                    'submission_form': SubmitRecipeForm(),
-                },
-            )
+            return redirect('submissions')
+        else:
+            submission_form = SubmitRecipeForm()
+
+    return render(
+            request, 
+            'submit_recipe.html',
+            {
+                'submission_form': SubmitRecipeForm(),
+            },
+        )
