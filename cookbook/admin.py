@@ -27,4 +27,5 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Submission)
 class SubmissionAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'submission_slug': ('submission_title',)}
     list_display = ('user', 'method')

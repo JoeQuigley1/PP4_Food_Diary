@@ -61,7 +61,7 @@ class Submission(models.Model):
     method = models.TextField(blank=False,)
     ingredients = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now=True)
-    image = CloudinaryField('image', default='placeholder')
+    image = CloudinaryField('image', default='placeholder', blank=True)
     submission_status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:

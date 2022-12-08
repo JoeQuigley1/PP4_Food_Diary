@@ -6,7 +6,7 @@
 
 {% if user.is_authenticated %}
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
         {{ submission_form | crispy }}
         {% csrf_token %}
 
