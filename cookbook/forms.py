@@ -15,6 +15,7 @@ class SubmitRecipeForm(forms.ModelForm):
         model = Submission
         fields = (
             'submission_title',
+            'submission_slug',
             'ingredients',
             'method',
             'image',

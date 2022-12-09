@@ -6,21 +6,31 @@
     <div class="row">
 
         <!-- Home page for The Food Diary -->
-        <div class="col-12 mt-3 left">
+        {% if user.is_authenticated %}
+        <div class="col-12 mt-3">
             <div class="row">
-                <h1>This is the home page</h1>
-            </div>
-        </div>
+                <div class="col-md-6">
+                    <div class="mt-4">
+                        <h1>Want to level up your cooking?</h1>
+                        <div class="mt-3">
+                            <a class="btn btn-bg" href="{% url 'submit_recipe' %}">Want to contribute?</a>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                <h1>There should be some explanation about the site here:</h1>
+        {% else %}
+                <div class="col-md-6">
+                    <div class="mt-4">
+                        <h1>Want to level up your cooking?</h1>
+                        <div class="mt-3">
+                            <a class="btn btn-bg" href="{% url 'account_signup' %}">Sign up!</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        {% endif %}
         </div>
-
 
     </div>
 
-</div>
-
-{%endblock%}
+    {%endblock%}
