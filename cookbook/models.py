@@ -62,7 +62,7 @@ class Submission(models.Model):
     ingredients = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now=True)
     image = CloudinaryField('image', default='placeholder', blank=True)
-    submission_status = models.IntegerField(choices=STATUS, default=0)
+    submission_status = models.IntegerField(choices=STATUS, default=1)
 
     class Meta:
         """Orders the submissions by most recent"""

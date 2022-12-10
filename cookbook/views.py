@@ -72,7 +72,7 @@ class RecipeDetail(View):
 
 class RecipeLike(View):
 
-    def post(self, request, slug):
+    def post(self, request, slug, *args, **kwargs):
 
         recipe = get_object_or_404(Recipe, slug=slug)
 
@@ -84,11 +84,11 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-
 class SubmissionPage(generic.ListView):
 
     model = Submission
-    queryset = Submission.objects.filter(submission_status=1).order_by('-created_on')
+    queryset = Submission.objects.all()
+
     template_name = 'user_submissions.html'
     paginate_by = 8
 
