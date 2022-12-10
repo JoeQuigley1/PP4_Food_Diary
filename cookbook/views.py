@@ -84,6 +84,7 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
+
 class SubmissionPage(generic.ListView):
 
     model = Submission
