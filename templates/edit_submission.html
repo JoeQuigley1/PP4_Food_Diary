@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% load cloudinary %}
 
-<!-- 
+
 <div class="container">
     <h1> Add a Public Recipe
     </h1>
@@ -14,17 +14,15 @@
         {% if user.is_authenticated %}
         <div class="col-10">
                 <form action="" method="POST" enctype="multipart/form-data">
-                    {{ edit_form | crispy }}
+                    {{ submission_form | crispy }}
                     {% csrf_token %}
             
-                    <button class="btn btn-md btn-secondary mb-5 mt-5" type="submit">Edit Recipe</button>
-                     <a href="{% url 'home' %}" class="btn btn-md btn-secondary mb-5 mt-5 ">Cancel</a>
-             
+                    <button class="btn btn-md btn-secondary mb-5 mt-5" type="submit">Submit a Recipe</button>
+                    <a href="#" class="btn btn-md btn-secondary mb-5 mt-5 ">Cancel</a>
+            
                 </form>
         </div>
 
         {% endif %}
     </div>
-</div> -->
-
-{%endblock%}
+</div>
