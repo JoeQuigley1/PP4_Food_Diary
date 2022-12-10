@@ -114,3 +114,21 @@ def submit_recipe(request):
                 'submission_form': SubmitRecipeForm(),
             },
         )
+
+def edit_submission(request, slug):
+    submission = get_object_or_404(Submission,)
+    edit_form = SubmitRecipeForm(request.POST, request.FILES)
+
+    if request.method == 'POST':
+
+        edit_form = SubmitRecipeForm(request.POST, request.FILES)
+
+        if edit_form.is_valid():
+            submission = edit_form.save(commit=False)
+            submission.user = request.user
+            submission.save()
+            return redirect(to)
+
+            return redirect('submissions')
+        else:
+            edit_form = SubmitRecipeForm()

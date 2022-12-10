@@ -150,3 +150,7 @@ body {
     background: transparent;
     border: none;
 }
+
+.footer {
+    max-height: 100px;
+}
