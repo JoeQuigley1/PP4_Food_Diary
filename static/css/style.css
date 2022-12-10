@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+
 body {
     background-color: #F9FAFC;
+    max-height: 100%;
+    font-family: 'Inter';
+    
+} 
+
+.main-bg {
+    background-color: #F9FAFC;
+}
+
+.hero-text {
+    text-align: center;
 }
 
 .brand {
@@ -23,10 +37,6 @@ body {
 
 .dark-bg {
     background-color: #445261;
-}
-
-.main-bg {
-    background-color: #F9FAFC;
 }
 
 .card {

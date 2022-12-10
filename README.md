@@ -39,8 +39,6 @@ echnologies Used
 ## Libraries and Frameworks
 Python libraries and api used
 - [Google auth](https://google-auth.readthedocs.io/en/master/index.html)
-- [Pprint](https://docs.python.org/3/library/pprint.html)
-- [Time](https://www.programiz.com/python-programming/time/sleep)
 - [Heroku](https://www.heroku.com/)
 - [Gitpod](https://www.gitpod.io/)
 - [GitHub](https://github.com/)
