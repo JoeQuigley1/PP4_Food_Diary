@@ -22,7 +22,7 @@
                                     <p class="author">Author: {{ submission.user }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'submission_detail' submission.submission_slug %}" class="post-link">
                                 <h2 class="card-title">{{ submission.submission_title }}</h2>
                             </a>
                             <hr />

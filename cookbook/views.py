@@ -13,7 +13,7 @@ class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipe_posts.html'
-    paginate_by = 6 
+    paginate_by = 6
 
 
 class RecipeDetail(View):
@@ -93,6 +93,22 @@ class SubmissionPage(generic.ListView):
     paginate_by = 8
 
 
+class SubmissionDetail(View):
+    # Renders the individual user submission to site #
+    def get(self, request, slug, *args, **kwargs):
+
+        queryset = Submission.objects.all()
+        submission = get_object_or_404(queryset, submission_slug=slug)
+
+        return render(
+            request,
+            'submission_detail.html',
+            {
+                'submission': submission,
+            }
+        )
+
+
 def submit_recipe(request):
 
     if request.method == 'POST':
@@ -115,20 +131,21 @@ def submit_recipe(request):
             },
         )
 
-def edit_submission(request, slug):
-    submission = get_object_or_404(Submission,)
-    edit_form = SubmitRecipeForm(request.POST, request.FILES)
 
-    if request.method == 'POST':
+# def edit_submission(request, slug):
+#     submission = get_object_or_404(Submission,)
+#     edit_form = SubmitRecipeForm(request.POST, request.FILES)
 
-        edit_form = SubmitRecipeForm(request.POST, request.FILES)
+#     if request.method == 'POST':
 
-        if edit_form.is_valid():
-            submission = edit_form.save(commit=False)
-            submission.user = request.user
-            submission.save()
-            return redirect(to)
+#         edit_form = SubmitRecipeForm(request.POST, request.FILES)
 
-            return redirect('submissions')
-        else:
-            edit_form = SubmitRecipeForm()
+#         if edit_form.is_valid():
+#             submission = edit_form.save(commit=False)
+#             submission.user = request.user
+#             submission.save()
+#             return redirect(to)
+
+#             return redirect('submissions')
+#         else:
+#             edit_form = SubmitRecipeForm()
