@@ -20,11 +20,46 @@
 
 # Testing
 
+# Deployment
+The site was deployed to Heroku. The following steps were taken:
+- Install Django & Gunicorn:
+```pip3 install 'django<4' gunicorn```
+- Install Django database & psycopg:
+```pip3 install dj_database_url psycopg2```
+- Install Cloudinary:
+```pip3 install dj3-cloudinary-storage```
+- Creating the requirements.txt file with the following command:
+```pip3 freeze --local > requirements.txt```
+- Django project created using:``
+```django-admin startproject fooddiary```
+- Django project created using:``
+```django-admin startapp cookbook```
+- the changes were then migrated using:
+```python3 manage.py migrate```
+- navigated to [Heroku](www.heroku.com) & created a new app called food-diary.
+- added the Heroku Postgres database to the Resources tab.
+- navigated to the Settings Tab, to add the following key/value pairs to the configvars:
+1. key: SECRET_KEY | value: randomkey
+2. key: PORT | value: 8000
+3. key: CLOUDINARY_URL | value: API environment variable
+4. key: DATABASE_URL | value: value supplied by Heroku
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- add an import os statement for the env.py file.
+- added Heroku to the ALLOWED_HOSTS in settings.py
+- created the Procfile
+- pushed the project to Github
+- connected my github account to Heroku through the Deploy tab
+- connected my github project repository, and then clicked on the "Deploy" button
+
+## Final Deployment
+
+-
 
 # Bugs
 
 
-echnologies Used 
+Technologies Used 
 
 ## Languages 
 
@@ -46,5 +81,13 @@ Python libraries and api used
 - [Bootstrap](https://getbootstrap.com/)
 
 ## Credits
- 
-https://docs.djangoproject.com/en/4.1/topics/http/file-uploads/
+
+- [Martina Terlevic](https://github.com/SephTheOverwitch): Helped with addressing 
+- “I think therefore I blog” walkthrough: Provided initial steps for setting up the project and deployment. In addition the instructions provided in the walkthrough guided me in the structure and styling of the project. 
+-  "I think therefore I blog" + "Hello Django" + Slack + Stackoverflow + fellow  [student](https://github.com/CluelessBiker) + [VeryAcademy](https://www.youtube.com/watch?v=pNVgLDKrK40) helped in creating basic CRUD functionality. 
+- Scott Tutor Support: Help with the user submissions showing correct content. 
+- Joshua and Ger Tutor Support: Help getting the submission functionality to render successfully and linking urls and using slugs correctly. 
+- [Django documentation](https://docs.djangoproject.com/en/4.1/topics/http/file-uploads/): Helped when using generic Django 
+- [Stack Overflow](https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean): Help with forms submitting and processing file data. 
+- [Stack Overflow](https://stackoverflow.com/questions/37207742/django-redirect) Help with procesessing views.
+
