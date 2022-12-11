@@ -14,7 +14,7 @@ class Recipe(models.Model):
         User, on_delete=models.CASCADE, related_name="recipes")
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now=True)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     ingredients = models.TextField()
     method = models.TextField()
     difficulty = models.IntegerField(choices=DIFFICULTY)
