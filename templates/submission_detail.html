@@ -26,8 +26,18 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-md-8 offset-4">
+            
+            <strong class="text-secondary">
+                <!-- Our total_comments variable goes before the closing strong tag -->
+                {{ submission.method }}
+            </strong>
+            
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-8 offset-md-2">
-            <a href="#" class="btn btn-secondary">Edit</a>
+            <a href="{% url 'edit_submission' submission.submission_slug %}" class="btn btn-secondary">Edit</a>
         </div>
     </div>
 </div>
