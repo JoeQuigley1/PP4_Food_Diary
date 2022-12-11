@@ -13,6 +13,9 @@
                 <div class="col-md-10 text-center feature-top">
                     <div class="mt-4 ">
                         <h1 class="hero-text">Want to level up your cooking?</h1>
+                        <img class="card-img-top"
+                                src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg"
+                                alt="placeholder image">
                         <div class="mt-3 ">
                             <a class="btn btn-bg btn-outline-dark text-center" href="{% url 'recipe_posts' %}">View our Expert Recipes</a>
                         </div>
@@ -60,7 +63,7 @@
                     Why not subit a recipe of your own?
                 </p>
                 <div class="mt-3 ">
-                    <a class="btn btn-bg btn-outline-dark" href="{% url 'submit_recipe' %}">Submit a Recipe</a>
+                    <a class="btn btn-bg btn-outline-dark mb-4" href="{% url 'submit_recipe' %}">Submit a Recipe</a>
                 </div>                
             </div>
         {% endif %}
