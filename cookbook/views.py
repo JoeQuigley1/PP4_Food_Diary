@@ -152,4 +152,10 @@ def edit_submission(request, slug):
     else:
         edit_form = SubmitRecipeForm(instance=submission)
 
-    return render(request, 'edit_submission.html', context)    
+    return render(request, 'edit_submission.html', context)
+
+
+def delete_submission(request, slug):
+    submission = get_object_or_404(Submission, submission_slug=slug)
+    submission.delete()
+    return redirect('submissions')
