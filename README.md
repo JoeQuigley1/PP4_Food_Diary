@@ -1,24 +1,24 @@
-# The Goal for this project
+# Cookbook
+Cook book is a site where users can quickly find a tasty recipe to use in their day to day lives.
+It is built with a sense of community in mind where users can share and interact with each other. 
 
-## User Goals 
+# Live website
+A link to the live website can be found 
+
+### Site purpose:
+The goal of this project was to create an onlie recipe blog.  Users of the blog can come together to use and share their recipe ideas. 
 
 ## User stories
+### As an admin
+1. I can **submit new recipe posts** so that **I can allow the community to interact**.
+2. I can **moderate comments** so that **the feedback provided is appropriate**.
+3. I can **create a log in / sign up page** so that **sit users can sign up to the site**.
 
-## Site owner's Goals
+### As a site user
+1. I can **visit recipe post page** so that **I can see the content**.
+2. I can **comment on recipes** so that **I can give my feedback**.
+3. I can **like recipe posts** so that **I can easily interact with other users**.
 
-## Requirements 
-
-## Design
-
-
-# Existing Features
-
-
-
-## Validation
-
-
-# Testing
 
 # Deployment
 The site was deployed to Heroku. The following steps were taken:
@@ -82,7 +82,7 @@ Python libraries and api used
 
 ## Credits
 
-- [Martina Terlevic](https://github.com/SephTheOverwitch): Helped with addressing 
+- [Martina Terlevic](https://github.com/SephTheOverwitch): Helped with addressing realistic goals for my project given my time and personal circumstances. 
 - “I think therefore I blog” walkthrough: Provided initial steps for setting up the project and deployment. In addition the instructions provided in the walkthrough guided me in the structure and styling of the project. 
 -  "I think therefore I blog" + "Hello Django" + Slack + Stackoverflow + fellow  [student](https://github.com/CluelessBiker) + [VeryAcademy](https://www.youtube.com/watch?v=pNVgLDKrK40) helped in creating basic CRUD functionality. 
 - Scott Tutor Support: Help with the user submissions showing correct content. 
