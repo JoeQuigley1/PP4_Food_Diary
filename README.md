@@ -54,10 +54,15 @@ The site was deployed to Heroku. The following steps were taken:
 
 ## Final Deployment
 
--
+### Gitpod
+- Ensure 'DEBUG = FALSE' in settings.py
+- Add "X_FRAME_OPTIONS= 'SAME ORIGIN'" to settings.py, to ensure that summernote editor works in deployed project.
+- Add, commit and push deployment commit to GitHub.
 
-# Bugs
-
+### Heroku
+- Go to 'Settings' tab and reveal config vars. Remove COLLECT_STATIC environment variable.
+- Go to 'Deploy' tab and scroll down to 'Deploy Branch' (ensure github repo is connected). Run deployment.
+- Wait for confirmation that application has deployed.
 
 Technologies Used 
 
