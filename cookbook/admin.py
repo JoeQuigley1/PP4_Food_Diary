@@ -29,3 +29,5 @@ class CommentAdmin(admin.ModelAdmin):
 class SubmissionAdmin(admin.ModelAdmin):
     prepopulated_fields = {'submission_slug': ('submission_title',)}
     list_display = ('user', 'method')
+    search_fields = ('title',)
+    summernote_fields = ('ingredients', 'method',)
