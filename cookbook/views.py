@@ -16,6 +16,7 @@ class RecipeList(generic.ListView):
     paginate_by = 6
 
 
+# Class used from "I think therefore I blog" walkthrough.
 class RecipeDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -69,7 +70,7 @@ class RecipeDetail(View):
             },
             )
 
-
+# Class used from "I think therefore I blog" walkthrough.
 class RecipeLike(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -109,6 +110,11 @@ class SubmissionDetail(View):
         )
 
 
+
+# Instructions from "Hello Django",
+# "I think therefore I blog",
+# Aided by StackOverflow, a student and a youtube video
+# Credited in Readme 
 def submit_recipe(request):
 
     if request.method == 'POST':
