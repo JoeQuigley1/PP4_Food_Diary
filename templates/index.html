@@ -3,23 +3,6 @@
 {% block content %}
 {% load static %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="col-md-12 text-center">
-                <div class="card">
-                <div class="card-body">
-                    <h2>
-                        Welcome to the Cookbook
-                    </h2>
-                </div>
-            </div>
-            </div>
-            
-        </div>
-    </div>
-</div>
-
 
 <div class="container">
     <div class="row">
@@ -27,9 +10,9 @@
         {% if user.is_authenticated %}
         <div class="col-12 ">
             <div class="row">
-                <div class="col-md-12 text-center feature-top">
+                <div class="col-md-10 text-center feature-top">
                     <div class="mt-4 ">
-                        <h3 class="hero-text">Want to level up your cooking?</h3>
+                        <h1 class="hero-text">Want to level up your cooking?</h1>
                         <img class="card-img-top"
                                 src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg"
                                 alt="placeholder image">
@@ -40,7 +23,7 @@
                 </div>
 
         {% else %}
-                <div class="col-md-12 mt-3">
+                <div class="col-md-10 mt-3">
                     <div class="row">
                         <div class="mt-4">
                             <h1>Want to level up your cooking?</h1>
@@ -60,11 +43,11 @@
 <div class="container">
     <div class="col-12">
         <div class="row">
-            <div class=" col-md-12 mt-3 text-center about-section">
+            <div class=" col-md-10 mt-3 text-center about-section">
                 <h3>
                     What we do:
                 </h3>
-                <p class="col-md-12 text-center">
+                <p class="col-md-10 offset-1 text-center">
                     We have a list of Expert recipes
                 </p>
                 <p>Feel free as a member of our commmunity to use them and let us know what you think!</p>
@@ -72,7 +55,7 @@
         </div>
         {% if user.is_authenticated %}
         <div class="row">
-            <div class="col-md-12 text-center about-section">
+            <div class="col-md-10 text-center about-section">
                 <h3>
                     If you think you've got what it takes:
                 </h3>
