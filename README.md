@@ -3,7 +3,7 @@ Cook book is a site where users can quickly find a tasty recipe to use in their 
 It is built with a sense of community in mind where users can share and interact with each other. 
 
 # Live website
-A link to the live website can be found 
+A link to the live website can be found [here](https://food-diary.herokuapp.com/)
 
 ### Site purpose:
 The goal of this project was to create an onlie recipe blog.  Users of the blog can come together to use and share their recipe ideas. 
