@@ -21,3 +21,11 @@ class SubmitRecipeForm(forms.ModelForm):
             'image',
         )
 
+        labels = {
+            'submission_title': 'Recipe name',
+            'submission_slug': 'Repeat name without spaces',
+            'ingredients': 'Ingredients',
+            'method': 'Method',
+            'image': 'Recipe Image',
+        }
+
