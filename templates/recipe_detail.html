@@ -16,9 +16,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in recipe.image.url %}
-                <img src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg" width="100%">
+                <img src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg" alt="placeholder image" width="100%">
                 {% else %}
-                <img src="{{ recipe.image.url }}" width="100%">
+                <img src="{{ recipe.image.url }}" alt="placeholder image" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -30,8 +30,6 @@
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text "></p>
                 <div class="row">
 
                     <div class="col-1">
@@ -70,11 +68,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
         </div>
     </div>
     <div class="row">
