@@ -7,23 +7,23 @@
 <div class="container">
     <div class="row">
         <h1 class="col-12 offset-4"> Add a Recipe
-    </h1>
+        </h1>
     </div>
-    
+
     <hr>
     <br>
 
     <div class="row justify-content-center">
         {% if user.is_authenticated %}
         <div class="col-10">
-                <form action="" method="POST" enctype="multipart/form-data">
-                    {{ submission_form | crispy }}
-                    {% csrf_token %}
-            
-                    <button class="btn btn-md btn-secondary mb-5 mt-5" type="submit">Submit a Recipe</button>
-                    <a href="{% url 'home' %}" class="btn btn-md btn-secondary mb-5 mt-5 ">Cancel</a>
-            
-                </form>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {{ submission_form | crispy }}
+                {% csrf_token %}
+
+                <button class="btn btn-md btn-secondary mb-5 mt-5" type="submit">Submit a Recipe</button>
+                <a href="{% url 'home' %}" class="btn btn-md btn-secondary mb-5 mt-5 ">Cancel</a>
+
+            </form>
         </div>
 
         {% endif %}

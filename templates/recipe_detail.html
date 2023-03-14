@@ -16,7 +16,8 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in recipe.image.url %}
-                <img src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg" alt="placeholder image" width="100%">
+                <img src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg"
+                    alt="placeholder image" width="100%">
                 {% else %}
                 <img src="{{ recipe.image.url }}" alt="placeholder image" width="100%">
                 {% endif %}
@@ -36,8 +37,8 @@
                         {% if user.is_authenticated %}
                         <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
 
-                                {% csrf_token %}
-                                {% if liked %}
+                            {% csrf_token %}
+                            {% if liked %}
 
                             <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
                                 <i class="fas fa-heart"></i></button>
@@ -47,7 +48,7 @@
                             <button type="submit" name="recipepost_id" value="{{recipe.slug}}" class="btn-like">
                                 <i class="far fa-heart"></i>
 
-                            {% endif %}
+                                {% endif %}
 
                         </form>
                         {% else %}
@@ -55,8 +56,8 @@
                         {% endif %}
                         <span class="text-secondary"><i class="far fa-heart"></i> {{ recipe.number_of_likes }} </span>
                         <!-- The number of likes goes before the closing strong tag -->
-                        
-                        
+
+
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -85,38 +86,35 @@
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
+
                     {{ comment.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
 
-            
-            <div class="card-body">
-                <!-- Create Comments -->
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
 
+        <div class="card-body">
+            <!-- Create Comments -->
+            {% if commented %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting approval
             </div>
+            {% else %}
+            {% if user.is_authenticated %}
+
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
 </div>
-
 {% endblock content %}

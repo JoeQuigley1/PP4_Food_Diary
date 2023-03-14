@@ -10,7 +10,7 @@
                     <h3>Submit a recipe</h3>
                     <a href="{% url 'submit_recipe' %}" class=" offset-1 btn btn-primary"> Click here!</a>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -28,7 +28,8 @@
                             <div class="image-container">
                                 {% if "placeholder" in submission.image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg" alt="placeholder image">
+                                    src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg"
+                                    alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" alt="submission image" src=" {{ submission.image.url }}">
                                 {% endif %}
@@ -48,7 +49,7 @@
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
-                                {% endif %}
+                {% endif %}
                 {% endfor %}
 
             </div>
@@ -58,6 +59,7 @@
 
 
     </div>
+</div>
 
 
-    {%endblock%}
+{%endblock%}

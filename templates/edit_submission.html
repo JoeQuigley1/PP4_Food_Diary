@@ -15,16 +15,17 @@
         <div class="col-10">
             <h2>Edit your changes:</h2>
             <hr>
-                <form action="" method="POST" enctype="multipart/form-data">
-                    {{ edit_form | crispy }}
-                    {% csrf_token %}
-            
-                    <button class="btn btn-md btn-secondary mb-5 mt-5" type="submit">Submit changes </button>
-                    <a href="{% url 'submission_detail' submission.submission_slug %}" class="btn btn-md btn-secondary mb-5 mt-5 ">Cancel</a>
-            
-                </form>
-        </div>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {{ edit_form | crispy }}
+                {% csrf_token %}
 
+                <button class="btn btn-md btn-secondary mb-5 mt-5" type="submit">Submit changes </button>
+                <a href="{% url 'submission_detail' submission.submission_slug %}"
+                    class="btn btn-md btn-secondary mb-5 mt-5 ">Cancel
+                </a>
+
+            </form>
+        </div>
         {% endif %}
     </div>
 </div>
