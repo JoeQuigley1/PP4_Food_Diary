@@ -7,7 +7,7 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
-        
+
 
 class SubmitRecipeForm(forms.ModelForm):
 
@@ -28,4 +28,3 @@ class SubmitRecipeForm(forms.ModelForm):
             'method': 'Method',
             'image': 'Recipe Image',
         }
-
