@@ -39,10 +39,10 @@
     {% if user.is_authenticated and submission.user == user %}
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <a href="{% url 'edit_submission' submission.submission_slug %}" class="btn btn-secondary">Edit</a>
+            <a href="{% url 'edit_sub' submission.submission_slug %}" class="btn btn-secondary">Edit</a>
         </div>
         <div class="col-md-8 offset-md-2">
-            <a href="{% url 'delete_submission' submission.submission_slug %}" class="btn btn-secondary">Delete</a>
+            <a href="{% url 'delete_sub' submission.submission_slug %}" class="btn btn-secondary">Delete</a>
         </div>
     </div>
     {% endif %}

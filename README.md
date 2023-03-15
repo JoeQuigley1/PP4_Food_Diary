@@ -47,7 +47,6 @@ Pycodestyle was installed to validate the python code written.
 
 - All code has been validated with no errors present.
 - Settings.py file has 5 'line too long' errors which are constant with the use of django.
-- Urls.py file has 3 'line too long' erros which are due a consistent naming convention in the project. 
 
 | App       | Models.py |    Forms.py    | Urls.py | Views.py |
 |-----------|-----------|----------------|---------|----------|
