@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse 
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Recipe, Submission
 from .forms import CommentForm, SubmitRecipeForm
@@ -22,7 +22,8 @@ class RecipeDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.filter(approved=True).order_by('-created_on')
+        comments = recipe.comments.filter(
+            approved=True).order_by('-created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -42,7 +43,8 @@ class RecipeDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.filter(approved=True).order_by('-created_on')
+        comments = recipe.comments.filter(
+            approved=True).order_by('-created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -70,6 +72,7 @@ class RecipeDetail(View):
             },
             )
 
+
 # Class used from "I think therefore I blog" walkthrough.
 class RecipeLike(View):
 
@@ -81,7 +84,7 @@ class RecipeLike(View):
             recipe.likes.remove(request.user)
         else:
             recipe.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
@@ -108,13 +111,12 @@ class SubmissionDetail(View):
                 'submission': submission,
             }
         )
-
-
-
 # Instructions from "Hello Django",
 # "I think therefore I blog",
 # Aided by StackOverflow, a student and a youtube video
-# Credited in Readme 
+# Credited in Readme
+
+
 def submit_recipe(request):
 
     if request.method == 'POST':
@@ -130,7 +132,7 @@ def submit_recipe(request):
             submission_form = SubmitRecipeForm()
 
     return render(
-            request, 
+            request,
             'submit_recipe.html',
             {
                 'submission_form': SubmitRecipeForm(),
@@ -147,13 +149,14 @@ def edit_submission(request, slug):
     }
     if request.method == 'POST':
 
-        edit_form = SubmitRecipeForm(request.POST, request.FILES, instance=submission)
+        edit_form = SubmitRecipeForm(
+            request.POST, request.FILES, instance=submission)
 
         if edit_form.is_valid():
             submission = edit_form.save(commit=False)
             submission.user = request.user
             submission.save()
-            
+
             return redirect('submissions')
     else:
         edit_form = SubmitRecipeForm(instance=submission)

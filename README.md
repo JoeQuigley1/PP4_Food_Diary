@@ -20,6 +20,41 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
 3. I can **like recipe posts** so that **I can easily interact with other users**.
 
 
+# Testing 
+
+## Validator Testing
+
+### HTML
+
+All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
+
+| Page                 | Logged Out | Logged In |
+|----------------------|------------|-----------|
+| add_recipe.html      | N/A        | No errors |
+| base.html            | No errors  | No errors |
+| delete_recipes.html  | N/A        | No errors |
+| index.html           | No errors  | No errors |
+| recipe_detail.html   | No errors  | No errors |
+| update_comment.html  | N/A        | No errors |
+| update_recipe.html   | N/A        | No errors |
+| login.html           | No errors  | N/A       |
+| logout.html          | N/A        | No errors |
+| signup.html          | No errors  | N/A       |
+
+
+
+Pycodestyle was installed to validate the python code written.
+
+- All code has been validated with no errors present.
+- Settings.py file has 5 'line too long' errors which are constant with the use of django.
+- Urls.py file has 3 'line too long' erros which are due a consistent naming convention in the project. 
+
+| App       | Models.py |    Forms.py    | Urls.py | Views.py |
+|-----------|-----------|----------------|---------|----------|
+| Cookbook  |    PASS   |      PASS      |   PASS  |   PASS   |
+| FoodDiary |    PASS   |      PASS      |   PASS  |   PASS   |
+
+
 # Deployment
 The site was deployed to Heroku. The following steps were taken:
 - Install Django & Gunicorn:

@@ -10,7 +10,8 @@ urlpatterns = [
         ), name='submissions'),
     path('submitrecipe/', views.submit_recipe, name='submit_recipe'),
     path(
-        'user_submissions/<slug:slug>', views.SubmissionDetail.as_view(), name='submission_detail'),
+        'user_submissions/<slug:slug>', views.SubmissionDetail.as_view(
+        ), name='submission_detail'),
     path('user_submissions/<slug:slug>/', views.edit_submission, name='edit_submission'),
     path('user_submission/<slug:slug>/', views.delete_submission, name='delete_submission'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
