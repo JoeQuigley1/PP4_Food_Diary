@@ -22,10 +22,10 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='recipe_likes', blank=True)
-    
+
     class Meta:
         ordering = ['-created_on']
-    
+
     def __str__(self):
         return self.title
 
@@ -70,4 +70,3 @@ class Submission(models.Model):
 
     def __str__(self):
         return self.submission_title
-

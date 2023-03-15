@@ -6,7 +6,8 @@ urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),
     path('recipeposts/', views.RecipeList.as_view(), name='recipe_posts'),
     path(
-        'user_submissions/', views.SubmissionPage.as_view(), name='submissions'),
+        'user_submissions/', views.SubmissionPage.as_view(
+        ), name='submissions'),
     path('submitrecipe/', views.submit_recipe, name='submit_recipe'),
     path(
         'user_submissions/<slug:slug>', views.SubmissionDetail.as_view(), name='submission_detail'),
