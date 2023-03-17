@@ -8,10 +8,10 @@
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">
-                    {{ submisission.title }}
+                    {{ submission.submission_title }}
                 </h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle"> {{ submission.author }} | {{ submission.created_on }} </p>
+                <p class="post-subtitle"> {{ submission.user }} | {{ submission.created_on }} </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
@@ -27,7 +27,17 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 offset-4">
+        <div class="col-md-6 offset-4">
+
+            <strong class="text-secondary">
+                <!-- Our total_comments variable goes before the closing strong tag -->
+                {{ submission.ingredients }}
+            </strong>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-4">
 
             <strong class="text-secondary">
                 <!-- Our total_comments variable goes before the closing strong tag -->
@@ -38,10 +48,10 @@
     </div>
     {% if user.is_authenticated and submission.user == user %}
     <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-4 offset-md-2 mt-5">
             <a href="{% url 'edit_sub' submission.submission_slug %}" class="btn btn-secondary">Edit</a>
         </div>
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-4 offset-md-2 mt-5">
             <a href="{% url 'delete_sub' submission.submission_slug %}" class="btn btn-secondary">Delete</a>
         </div>
     </div>
