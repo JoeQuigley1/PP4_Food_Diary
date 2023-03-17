@@ -31,7 +31,34 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
 ## Expert Recipe Detail
  ![Expert Recipe Detail](docs/testing/Exper%20Recipe%20detail.png)
 
+ ## Commented Expert Recipe Detail
+ ![Commented Expert Recipe Detail](docs/testing/Commented%20expert%20recipe.png)
 
+## Sign In
+  ![Sign In](docs/testing/Sign%20in%20page.png)
+
+## Sign Out Modal
+
+  ![Sign In](docs/testing/Sign%20out%20modal.png)
+
+## Sign Up Form
+ ![Sign Up Form](docs/testing/Sign%20Up%20Form.png)
+
+## Submit recipe button
+
+![Submit Recipe Button](docs/testing/Submit%20recipe%20button.png)
+
+## Public Recipe Posts
+![Public Recipe Posts](docs/testing/Public%20Recipe%20Posts.png)
+
+## Public Recipe Detail
+![Public Recipe Detail](docs/testing/Public%20Recipe%20Detail.png)
+
+## Edit Form
+![Edit Form](docs/testing/Edit%20Form.png)
+
+## Submit Recipe Form
+![Submit Recipe Form](docs/testing/Submit%20Recipe%20Form.png)
 
 # Testing 
 
