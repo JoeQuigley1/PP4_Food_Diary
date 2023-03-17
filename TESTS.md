@@ -62,7 +62,9 @@ Submit Recipe Form| Cancel button redirectes the user to the home page   |  Home
 
 
 
+## Resposive Design
 
+Site is responsive from testing completed on [responsive design checker](https://responsivedesignchecker.com/)
 
 
 
