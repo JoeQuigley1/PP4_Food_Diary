@@ -11,12 +11,25 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
 ### Features
 
 ## Navbar 
- # Logged In View
+ ### Logged In View
   ![NavBar Logged In](docs/testing/Navbar-loggedin.png)
 
 
-# Logged Out View
+### Logged Out View
   ![NavBar Logged Out](docs/testing/Navbar-loggedout.png)
+
+## Home Page
+ ### Logged In View
+  ![Home Page Logged In](docs/testing/home%20page-loggedin.png)
+
+ ### Logged Out View
+ ![Home Page Logged Out](docs/testing/Home%20page%20logged%20out.png)
+
+## Expert Recipe Page
+ ![Expert Recipe Page](docs/testing/expert-recipe-page.png)
+
+## Expert Recipe Detail
+ ![Expert Recipe Detail](docs/testing/Exper%20Recipe%20detail.png)
 
 
 
