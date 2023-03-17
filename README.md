@@ -8,16 +8,16 @@ A link to the live website can be found [here](https://food-diary.herokuapp.com/
 ### Site purpose:
 The goal of this project was to create an onlie recipe blog.  Users of the blog can come together to use and share their recipe ideas. 
 
-## User stories
-### As an admin
-1. I can **submit new recipe posts** so that **I can allow the community to interact**.
-2. I can **moderate comments** so that **the feedback provided is appropriate**.
-3. I can **create a log in / sign up page** so that **sit users can sign up to the site**.
+### Features
 
-### As a site user
-1. I can **visit recipe post page** so that **I can see the content**.
-2. I can **comment on recipes** so that **I can give my feedback**.
-3. I can **like recipe posts** so that **I can easily interact with other users**.
+## Navbar 
+ # Logged In View
+  ![NavBar Logged In](docs/testing/Navbar-loggedin.png)
+
+
+# Logged Out View
+  ![NavBar Logged Out](docs/testing/Navbar-loggedout.png)
+
 
 
 # Testing 

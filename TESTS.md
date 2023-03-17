@@ -26,6 +26,26 @@
 
 ### As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
 
+
+## Manual Testing
+
+  | Feature | Description     | Expected Result |    Actual Result   | Pass/Fail | Comments |
+|----------|-----------|-----------|----------------|---------|----------|
+|Navbar| Login button navigates to Signin page   |    On click user Sign in Page is shown   |      As expected     |   PASS  |   N/A   |
+|Navbar| Sign in Page renders succesfully   |    User can enter in login details  |      As expected     |   PASS  |   N/A   |
+|Sign in| Onced signed in User is directed tot he home page   |    Home page renders successfully |      As expected     |   PASS  |   N/A   |
+|Navbar| Logout button navigates to sign out page   |    Log out page renders successfully   |      As expected     |   PASS  |   N/A   |
+|Sign out| Sign out warning modal requires user to confirm sign out  |    Signout modal and button renders succesfully |      As expected     |   PASS  |   N/A   |
+|Sign out| Sign out buttons signs user out and redirects to home page  |    User is signed out and redirected to home page |      As expected     |   PASS  |   N/A   |
+|Home page (Logged out)| Home page is rendered as a logged out user with prompts to sign up/sign in  |    Home page displays all features for a logged out user   |      As expected     |   PASS  |   N/A |
+|Home Page| Sing up button directs user to a page to register as a site user  |    Sign up page rendered successfully   |      As expected     |   PASS  |   N/A   |
+|Home Page| Log in button directs user to a page to sign in Page   |    Sign in page rendered successfully   |      As expected     |   PASS  |   N/A   |
+|Sign up Page| Form to register as a site user is displayed and working  |    Sign up Form renders successfully and creates a user account   |      As expected     |   PASS  |   N/A   |
+
+
+|Navbar| Login button navigates to login page   |    On click user is directed to Login page   |      As expected     |   PASS  |   N/A   |
+
+
 ## Validator Testing
 
 ### HTML
