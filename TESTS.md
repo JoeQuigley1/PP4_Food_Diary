@@ -2,6 +2,8 @@
 
  ### As a Site User I can  access an individual post  so that I can see the details clearly
 
+  -  ![Expert Detail](docs/testing/Exper%20Recipe%20detail.png)
+
  ### As a Site User I can  create a post at the click of a button * so that I can easily contribute to the site
 
 ### As a Site User I can like or unlike posts so that I can interact with the content
@@ -15,6 +17,8 @@
 ### As a Site User I can login  so that I can have secure access to the site
 
 ### As a Site User I can view a list of recipes  so that I can choose one to open
+
+  -  ![Expert Detail](docs/testing/expert-recipe-page.png)
 
 ### As a Site User/ Admin I can view the number of likes on each post so that I can see which posts are most popular.
 
