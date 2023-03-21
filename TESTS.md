@@ -16,6 +16,8 @@
 
 ### As a Site User I can login  so that I can have secure access to the site
 
+- I have successfully entered credentials, logged in and have received access to the site. 
+
 ### As a Site User I can view a list of recipes  so that I can choose one to open
 
   -  ![Expert Detail](docs/testing/expert-recipe-page.png)
