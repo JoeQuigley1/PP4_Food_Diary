@@ -3,16 +3,26 @@
  ### As a Site User I can  access an individual post  so that I can see the details clearly
 
   -  ![Expert Detail](docs/testing/Exper%20Recipe%20detail.png)
+  -I have clicked the expert post from the posts list page and the detail renders successfully. 
 
- ### As a Site User I can  create a post at the click of a button * so that I can easily contribute to the site
+ ### As a Site User I can  create a post at the click of a button  so that I can easily contribute to the site
+  - Submit a recipe in navbar and all submit a recipe buttons succesfully redirects the user to the submit a recipe form. 
+  - on Completion of the submit a recipe form, a new recipe post is succesfully rendered on the users recipe page. 
 
 ### As a Site User I can like or unlike posts so that I can interact with the content
+- Non Admin users can like and unlike expert recipe posts.
 
 ### As a Site User I can comment on posts so that I can be involved in other users content
+- Non Admin users can comment on expert posts. 
+- The posts must be approved by the admin.
 
 ### As a Site User I can sign up with an email and password so that I can gain access to the blog site
+- As a user,  I have clicked the sign up button and have been redirected to the sign up form. 
+- I have entered in sign all credentials correctly and have created a new user profile. 
 
 ### As a Site User I can logout of the site  so that I can ensure that my account is safe if I use multiple devices
+- I have clicked the log out button, been directed to the sign out page with sign out prompt. 
+- Once sign out button prompt has been clicked I have been succesfully signed out and redirected to the home page. 
 
 ### As a Site User I can login  so that I can have secure access to the site
 
