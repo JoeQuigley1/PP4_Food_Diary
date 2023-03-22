@@ -1,8 +1,6 @@
 # USER STORY TESTING
 
  ### As a Site User I can  access an individual post  so that I can see the details clearly
-
-  -  ![Expert Detail](docs/testing/Exper%20Recipe%20detail.png)
   -I have clicked the expert post from the posts list page and the detail renders successfully. 
 
  ### As a Site User I can  create a post at the click of a button  so that I can easily contribute to the site
@@ -30,17 +28,28 @@
 
 ### As a Site User I can view a list of recipes  so that I can choose one to open
 
-  -  ![Expert Detail](docs/testing/expert-recipe-page.png)
+  - I have clicked and successfully and public recipe page is successfully rendered. 
 
 ### As a Site User/ Admin I can view the number of likes on each post so that I can see which posts are most popular.
 
+  - I have clicked the expert post detail and can view any how many likes are made on a post. 
+
 ### As a Site Admin I can ** approve or disapprove comments ** so that ** I can filter out objectionable comments**
+ - I have made a comment which is not visible to the user. 
+ - I have approved the comment in the admin panel
+ - Comment is visible to all users once approved by the admin. 
 
 ### As a Site User/Admin I can view comments on an individual post so that I can read the conversation
 
-### As a Site User I can create and save drafts so that I can submit them later
+- I have clicked the expert post detail and can view any how many comments are made on a post.
+
 
 ### As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+
+- Once logged in, I have opened my own blog post from public recipes. 
+- From the detail view, I have the option to edit or delete the post. 
+- Any changes made from the edit are saved. 
+- I have clicked delete and the recipe is deleted. 
 
 
 ## Manual Testing
