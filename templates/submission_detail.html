@@ -17,9 +17,9 @@
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in submission.image.url %}
                 <img src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg"
-                    alt="placeholder image" width="100%">
+                    alt="placeholder image">
                 {% else %}
-                <img src="{{ submission.image.url }}" alt=" submission image" width="100%">
+                <img src="{{ submission.image.url }}" alt=" submission image">
                 {% endif %}
             </div>
         </div>

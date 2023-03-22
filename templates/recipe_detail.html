@@ -17,20 +17,20 @@
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in recipe.image.url %}
                 <img src="https://res.cloudinary.com/deu8g0bhj/image/upload/v1670270038/placeholder-cookbook_mbevzk.jpg"
-                    alt="placeholder image" width="100%">
+                    alt="placeholder image">
                 {% else %}
-                <img src="{{ recipe.image.url }}" alt="placeholder image" width="100%">
+                <img src="{{ recipe.image.url }}" alt="placeholder image">
                 {% endif %}
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 offset-4">
-    
-                <strong class="text-secondary">
-                    <!-- Our total_comments variable goes before the closing strong tag -->
-                    {{ recipe.description | safe }}
-                </strong>
-    
+
+
+
+                {{ recipe.description | safe }}
+
+
             </div>
         </div>
     </div>
