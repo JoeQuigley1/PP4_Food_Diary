@@ -1,9 +1,29 @@
-# Cookbook
+## Table of Contents 
+1. [Introduction](#the-food-diary)
+2. [Features](#features)
+3. [Testing](#testing)
+    1. [Navbar](#navbar)
+    2. [Home Page](#home-page)
+    3. [Expert Detail](#expert-recipe-detail)
+    4. [Authorisation](#sign-in)
+    5. [User Recipes(submissions)](#submit-recipe-button)
+4. [Deployment](#deployment)
+    1. [Elephant SQL](#deployment-elephant-sql)
+5. [Technologies](#technologies-used)
+    1. [Modules](#modules-used-for-this-project)
+    2. [Languages](#languages)
+6. [Credits](#credits)
+
+## The Food Diary
 Cook book is a site where users can quickly find a tasty recipe to use in their day to day lives.
 It is built with a sense of community in mind where users can share and interact with each other. 
 
 # Live website
 A link to the live website can be found [here](https://food-diary.herokuapp.com/)
+
+
+
+![Am I Responsive](docs/testing/responsive%20design.png)
 
 ### Site purpose:
 The goal of this project was to create an onlie recipe blog.  Users of the blog can come together to use and share their recipe ideas. 
@@ -14,9 +34,10 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
  ### Logged In View
   ![NavBar Logged In](docs/testing/Navbar-loggedin.png)
 
-
 ### Logged Out View
   ![NavBar Logged Out](docs/testing/Navbar-loggedout.png)
+
+
 
 ## Home Page
  ### Logged In View
@@ -24,6 +45,9 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
 
  ### Logged Out View
  ![Home Page Logged Out](docs/testing/Home%20page%20logged%20out.png)
+
+
+
 
 ## Expert Recipe Page
  ![Expert Recipe Page](docs/testing/expert-recipe-page.png)
@@ -34,6 +58,8 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
  ## Commented Expert Recipe Detail
  ![Commented Expert Recipe Detail](docs/testing/Commented%20expert%20recipe.png)
 
+
+
 ## Sign In
   ![Sign In](docs/testing/Sign%20in%20page.png)
 
@@ -43,6 +69,8 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
 
 ## Sign Up Form
  ![Sign Up Form](docs/testing/Sign%20Up%20Form.png)
+
+
 
 ## Submit recipe button
 
@@ -59,6 +87,8 @@ The goal of this project was to create an onlie recipe blog.  Users of the blog 
 
 ## Submit Recipe Form
 ![Submit Recipe Form](docs/testing/Submit%20Recipe%20Form.png)
+
+
 
 # Testing 
 
@@ -109,7 +139,34 @@ The site was deployed to Heroku. The following steps were taken:
 - Go to 'Deploy' tab and scroll down to 'Deploy Branch' (ensure github repo is connected). Run deployment.
 - Wait for confirmation that application has deployed.
 
-Technologies Used 
+# Deployment Elephant SQL 
+
+As of November 2022, Heroku ceased to provide a free service. The hosting of this website is carried out using the free service [Elephant SQL](https://www.elephantsql.com/). 
+
+The steps used to deploy this project can be seen [here](https://code-institute-students.github.io/deployment-docs/30-pp4/django-01-create-a-database).
+
+ # Technologies Used 
+
+## Modules used for this project:
+- asgiref==3.5.2
+- cloudinary==1.30.0
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==3.2.16
+- django-allauth==0.51.0
+- django-crispy-forms==1.14.0
+- django-summernote==0.8.20.0
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- psycopg2==2.9.5
+- PyJWT==2.6.0
+- python3-openid==3.2.0
+- pytz==2022.6
+- requests-oauthlib==1.3.1
+- sqlparse==0.4.3
+
+
+
 
 ## Languages 
 
